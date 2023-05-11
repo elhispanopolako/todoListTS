@@ -1,14 +1,85 @@
-#img {
-  display: block;
-  margin: auto;
-  height: 128px;
-  width: 128px;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-#canvas {
+body {
+  background-color: #f5f5f5;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  color: rgb(179, 131, 226);
+  font-size: 4rem;
+  text-align: center;
+  opacity: 0.4;
+}
+
+form {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  width: 600px;
+}
+
+.input {
+  border: none;
+  color: #444;
+  font-size: 2rem;
+  padding: 1rem 2rem;
   display: block;
-  margin: 2rem auto;
-  width: 540px;
-  height: 540px;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: #d5d5d5;
+}
+
+.input:focus {
+  outline-color: rgb(179, 131, 226);
+}
+
+#list {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+form button {
+  width: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: rgb(179, 131, 226);
+  color: #fff;
+  border: 0;
+  padding: 10px;
+}
+
+#list li {
+  border-top: 1px solid #e5e5e5;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+
+}
+
+#list li.completed {
+  color: #b6b6b6;
+  text-decoration: line-through;
+}
+
+#list li label {
+  cursor: pointer;
+}
+
+h4 {
+  cursor: pointer;
 }
