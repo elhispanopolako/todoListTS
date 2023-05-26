@@ -1,6 +1,5 @@
 import { v4 as uuidV4 } from 'uuid'
-type Task = { id: string, title: string, completed: boolean, createdAt: Date }
-
+export type Task = { id: string, title: string, completed: boolean, createdAt: Date }
 const list = document.querySelector<HTMLUListElement>("#list")
 const form = document.querySelector("#new-task-form") as HTMLFormElement
 const input = document.querySelector<HTMLInputElement>("#new-task-title")
@@ -33,6 +32,9 @@ function addListItem(task: Task) {
   })
   checkbox.type = "checkbox"
   checkbox.checked = task.completed
+  if (checkbox.checked) {
+    item.classList.add('completed')
+  }
   label.append(checkbox, task.title)
   item.append(label)
   list?.append(item)
